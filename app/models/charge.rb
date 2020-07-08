@@ -19,6 +19,7 @@ class Charge < ApplicationRecord
   before_create :generate_uid
 
   private
+
   def generate_uid
     begin
       self.uid = SecureRandom.hex(5)
