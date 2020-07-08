@@ -1,0 +1,30 @@
+# == Schema Information
+#
+# Table name: charges
+#
+#  id             :bigint           not null, primary key
+#  amount         :decimal(, )      default(0.0)
+#  error_message  :text
+#  payment_method :integer          default(0)
+#  response_data  :jsonb
+#  status         :integer          default(0)
+#  uid            :string(50)
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
+one:
+  uid: MyString
+  status: 1
+  payment_method: 1
+  amount: 9.99
+  error_message: MyText
+  response_data: 
+
+two:
+  uid: MyString
+  status: 1
+  payment_method: 1
+  amount: 9.99
+  error_message: MyText
+  response_data: 
