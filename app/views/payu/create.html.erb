@@ -1,0 +1,19 @@
+
+<form method="post" action="<%= payu_url %>">
+  <input name="merchantId"    type="hidden"  value="<%= ENV['PAYU_MERCHANT_ID'] %>">
+  <input name="accountId"     type="hidden"  value="<%= ENV['PAYU_ACCOUNT_ID'] %>">
+  <input name="description"   type="hidden"  value="Pago programa Full Stack">
+  <input name="referenceCode" type="hidden"  value="<%= @charge.uid %>">
+  <input name="amount"        type="hidden"  value="<%= @charge.amount %>">
+  <input name="tax"           type="hidden"  value="0">
+  <input name="taxReturnBase" type="hidden"  value="0">
+  <input name="currency"      type="hidden"  value="COP">
+  <input name="signature"     type="hidden"  value="<%= @signature %>">
+  <input name="test"          type="hidden"  value="1">
+  <input name="responseUrl"    type="hidden"  value="<%= ENV["HOSTNAME"] %>/payu/response">
+  <input name="confirmationUrl"    type="hidden"  value="<%= ENV["HOSTNAME"] %>/payu/confirmation">
+ </form>
+
+ <script>
+   document.querySelector("form").submit();
+ </script>
