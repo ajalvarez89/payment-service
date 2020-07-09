@@ -13,5 +13,8 @@
   <input name="buyerEmail"    type="hidden"  value="test@test.com" >
   <input name="responseUrl"    type="hidden"  value="<%= ENV["HOSTNAME"] %>/payu/response" >
   <input name="confirmationUrl"    type="hidden"  value="<%= ENV["HOSTNAME"] %>/payu/confirmation" >
-  <input name="Submit"        type="submit"  value="Enviar" >
 </form>
+
+<script>
+  document.querySelector("form").submit();
+</script>
